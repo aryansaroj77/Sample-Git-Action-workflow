@@ -2,14 +2,15 @@ name: "Hello world workflow"
 
 # Controls when the workflow will run
 on:
-  push:
+   push: 
     branches:
       - master
       - production
 
 jobs:
-  hello_world: 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print hello world
-        run: echo "Hello world"
+    hello_world: 
+        runs-on: ubuntu-latest
+        steps:
+           - name: Print hello world
+             run: echo "Hello world"
+  
