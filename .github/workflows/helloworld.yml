@@ -15,3 +15,6 @@ jobs:
 
            - name: "Print current date"
              run: date "+%Y-%m-%d %H:%M:%S"
+             env:
+              TZ: Asia/Kolkata
+               
