@@ -19,7 +19,6 @@ jobs:
           else
             echo "Unknown branch"
           fi
-  
   on-pull-request:
     runs-on: ubuntu-latest
     steps:
