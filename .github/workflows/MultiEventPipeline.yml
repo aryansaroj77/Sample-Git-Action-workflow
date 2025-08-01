@@ -19,3 +19,9 @@ jobs:
           else
             echo "Unknown branch"
           fi
+  
+  on-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Running on pull request"
+      run: echo "Running on pull request"
