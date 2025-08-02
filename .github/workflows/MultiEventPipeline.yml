@@ -8,18 +8,15 @@ on:
         
 jobs:
   on-push:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: "Check branch and print message"
-        run: |
-          if [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
-            echo "This is MAIN branch push"
-          elif [[ "$GITHUB_REF" == "refs/heads/Test" ]]; then
-            echo "This is TEST branch push"
-          else
-            echo "Unknown branch"
-          fi
+        run: echo "Running on push"
+
+        
   on-pull-request:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
     - name: "Running on pull request"
