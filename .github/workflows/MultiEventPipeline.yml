@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - Test
+  workflow_dispatch: #this will add one UI     
         
 jobs:
   on-push:
