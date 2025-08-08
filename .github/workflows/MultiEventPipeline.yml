@@ -1,0 +1,31 @@
+name: "Multi event pipeline / workflow"
+
+on: 
+  push:
+    branches:
+      - main
+      - Test
+  workflow_dispatch: #this will add one UI     
+        
+jobs:
+  on-push:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Check branch and print message"
+        run: echo "Running on push"
+
+        
+  on-pull-request:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Running on pull request"
+      run: echo "Running on pull request"
+      
+  on-workflow-dispatch:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Runnung on workflow dispatch"
+        run: echo "Running on workflow dispatch"
